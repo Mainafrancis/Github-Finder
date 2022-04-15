@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
+import { Http, Headers } from '@angular/http';
+import 'rxjs/add/operator/map';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProfileService {
 
-  constructor() { }
+  private username:string;
+  private clientid = 'b30874d803c2affc19be';
+  private clientsecret = 'a6427e44f11b88fe653deba8b6d77ba545f8df99';
+
+  constructor(private http:Http) { 
+     console.log("service is now ready!");
+     this.username = 'mainafrancis';
+  }
+
+  getProfileInfo(){
+    return this.http.get("")
+  }
+
 }
