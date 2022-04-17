@@ -16,7 +16,7 @@ import { ProfileComponent } from './components/profile/profile.component';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]
